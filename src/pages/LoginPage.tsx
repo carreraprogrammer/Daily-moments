@@ -15,6 +15,7 @@ const LoginPage: React.FC<Props> = ({ onLogin }) => {
     try {
       const credential = await signInWithEmailAndPassword(auth, 'test1@example.org', 'test1234');
       console.log('credential:', credential);
+      onLogin();
     } catch (error) {
       console.error('Error during sign in:', error);
     }
